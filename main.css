@@ -1,0 +1,155 @@
+/*html and body styles*/
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+body {
+    margin: 0rem;
+    height: 100%;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgb(255, 87, 65) 0%,
+        rgba(53, 53, 255, 1) 50%,
+        rgba(0, 212, 255, 1) 100%
+    );
+}
+/* set all children of html doc to 'box-sizing: border box;'*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+/* calculator container styles */
+.calc_box {
+    position: absolute;
+    display: grid;
+    grid-template-areas:
+        "answer answer answer answer"
+        "ac ac del divide"
+        "one two three multi"
+        "four five six plus"
+        "seven eight nine minus"
+        "dec zer equals equals";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2px;
+    width: 20rem;
+    height: 40rem;
+    margin: -20rem -10rem;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+/* answer div styles */
+#answer {
+    position: relative;
+    margin: 2px 2px 0px 2px;
+}
+#superscript {
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    font-size: 1rem;
+}
+#subscript {
+    position: absolute;
+    top: 30%;
+    height: 65%;
+    width: 100%;
+    font-size: 2rem;
+}
+.center {
+    position: relative;
+    top: 50%;
+    height: 1em;
+    width: 100%;
+    margin-top: -0.5em;
+    text-align: right;
+}
+#answer span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1em;
+}
+/* button styles */
+.button {
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(196, 164, 236);
+    opacity: inherit;
+    font-size: 1rem;
+}
+.button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.button:hover {
+    background-color: rgb(216, 199, 236);
+}
+/* button grid-area names assigned */
+#answer {
+    grid-area: answer;
+}
+#ac {
+    grid-area: ac;
+}
+#del {
+    grid-area: del;
+}
+#divide {
+    grid-area: divide;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+}
+#three {
+    grid-area: three;
+}
+#multi {
+    grid-area: multi;
+}
+#four {
+    grid-area: four;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+}
+#plus {
+    grid-area: plus;
+}
+#seven {
+    grid-area: seven;
+}
+#eight {
+    grid-area: eight;
+}
+#nine {
+    grid-area: nine;
+}
+#minus {
+    grid-area: minus;
+}
+#dec {
+    grid-area: dec;
+}
+#zer {
+    grid-area: zer;
+}
+#equals {
+    grid-area: equals;
+}
