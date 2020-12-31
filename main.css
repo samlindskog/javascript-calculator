@@ -51,6 +51,7 @@ body {
 #answer {
     position: relative;
     margin: 2px 2px 0px 2px;
+    text-align: right;
 }
 #superscript {
     position: absolute;
@@ -60,10 +61,11 @@ body {
 }
 #subscript {
     position: absolute;
-    top: 30%;
+    top: 35%;
     height: 65%;
     width: 100%;
     font-size: 2rem;
+    line-height: 200%;
 }
 .center {
     position: relative;
