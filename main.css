@@ -38,8 +38,8 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 2px;
-    width: 20rem;
-    height: 40rem;
+    width: 25rem;
+    min-height: 40rem;
     margin: -20rem -10rem;
     top: 50%;
     left: 50%;
@@ -58,14 +58,17 @@ body {
     height: 35%;
     width: 100%;
     font-size: 1rem;
+    line-height: 200%;
+    overflow: auto;
 }
 #subscript {
     position: absolute;
     top: 35%;
-    height: 65%;
+    min-height: 65%;
     width: 100%;
     font-size: 2rem;
     line-height: 200%;
+    overflow: auto;
 }
 .center {
     position: relative;
