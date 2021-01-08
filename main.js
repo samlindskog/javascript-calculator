@@ -61,6 +61,7 @@ class Calculator {
     }
     //conducts operations at required index, allowing for pemdas to be followed
     operate(operation, index) {
+        console.log("operate method");
         let number;
         switch(operation) {
             case '*':
@@ -143,31 +144,36 @@ class Calculator {
     //utilizes this.operate() in order of pemdas, leaving answer in this.numberArrayFloat[0]
     //updates display values accordingly
     calculate() {
+        console.log('calculate method');
         if(this.numberArray[this.numberArray.length - 1] === ''||
         this.subscriptText.substr(this.subscriptText.length - 2, this.subscriptText.length - 1) === '/0') {
             this.subscriptText = 'error';
             this.calculatorDisabled = true;
-            this.updateDisplay()
+            this.updateDisplay();
             return
         }
         for(let i = 0; i < this.numberArrayFloat.length - 1; i++) {
             if(this.operationArray[i] === '*') {
                 this.operate('*', i);
+                i--;
             }
         }
         for(let i = 0; i < this.numberArrayFloat.length - 1; i++) {
             if(this.operationArray[i] === '/') {
                 this.operate('/', i);
+                i--;
             }
         }
         for(let i = 0; i < this.numberArrayFloat.length - 1; i++) {
             if(this.operationArray[i] === '+') {
                 this.operate('+', i);
+                i--;
             }
         }
         for(let i = 0; i < this.numberArrayFloat.length - 1; i++) {
             if(this.operationArray[i] === '-') {
                 this.operate('-', i);
+                i--;
             }
         }
         this.superscriptText = this.subscriptText + '=';
